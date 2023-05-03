@@ -1,0 +1,8 @@
+name: 1workflow
+on: push
+jobs:
+  1workflow:
+    runs_on: ubuntu
+    steps:
+      - name: lint
+        run: npm install lint

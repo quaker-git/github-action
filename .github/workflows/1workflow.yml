@@ -2,7 +2,7 @@ name: 1workflow
 on: push
 jobs:
   1workflow:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: lint
         run: npm install lint

@@ -9,5 +9,29 @@ jobs:
         uses: actions/checkout@v3
       - name: npm dependency
         run: npm ci
-      - name: npm lint execution
+      - name: Lint execution
         run: npm run lint
+
+  work_2flow:
+    needs: work_1flow
+    name: second-worflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: npm dependency
+        run: npm ci
+      - name: Test Execution
+        run: npm run lint
+
+  work_3flow:
+    needs: work_2flow
+    name: third-worflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: npm dependency
+        run: npm ci
+      - name: Build Execution
+        run: npm run build

@@ -35,3 +35,9 @@ jobs:
         run: npm ci
       - name: Build Execution
         run: npm run build
+  work_4flow:
+    name: gitlog
+    runs-on:  ubuntu-latest
+    steps:
+      - name: log
+        run: echo "${{ toJSON(github)}}"

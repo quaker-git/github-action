@@ -22,7 +22,7 @@ jobs:
       - name: npm dependency
         run: npm ci
       - name: Test Execution
-        run: npm run lint
+        run: npm run test
 
   work_3flow:
     needs: work_2flow

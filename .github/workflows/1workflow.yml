@@ -5,5 +5,7 @@ jobs:
     name: first-workflow
     runs-on: ubuntu-latest
     steps:
-      - name: lint
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: npm lint execution
         run: npm install lint
